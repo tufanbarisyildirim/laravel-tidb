@@ -40,9 +40,9 @@ In TiDB, all supported DDL changes are performed online. Compared with DDL opera
 
 
 
-# Some more  Unsupported features
+# Some more unsupported features
 
-TiDB Mysql Compatibility](https://docs.pingcap.com/tidb/v3.0/mysql-compatibility)
+[TiDB Mysql Compatibility](https://docs.pingcap.com/tidb/v3.0/mysql-compatibility)
 
 This lib does not solve the following unsupported features since TiDB does not support yet. 
 
