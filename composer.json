@@ -1,0 +1,34 @@
+{
+    "name": "tufanbarisyildirim/laravel-tidb",
+    "description": "TiDB Grammar lib for Laravel",
+    "keywords": [
+        "tidb",
+        "laravel"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/tufabbarisyildirim/laravel-tidb",
+    "support": {
+        "issues": "https://github.com/tufanbarisyildirim/laravel-tidb/issues",
+        "source": "https://github.com/tufanbarisyildirim/laravel-tidb"
+    },
+    "authors": [
+        {
+            "name": "Tufan Baris Yildirim",
+            "email": "tufanbarisyildirim@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TiDB": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3.0",
+        "laravel/framework": "^7.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
