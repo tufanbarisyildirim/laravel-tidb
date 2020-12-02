@@ -9,6 +9,13 @@ The goal is to change queries on the fly to make them compatible with TiDB befor
 > 
 > if you are using TiDB with laravel in production and you already faced some of them and fixed, awesome, just open a PR!
 
+## Installa using Composer
+```
+composer require tufanbarisyildirim/laravel-tidb
+```
+
+## What you need to change for better support
+-- Todo: explain how should a developer write migrations and rollbacks.
 
 ## Current Progress
 This library aims to provide some workarounds to keep your laravel app working with TiDB. But a single developer can't guarantee to get the all done. 
