@@ -1,13 +1,13 @@
 <?php
 
-namespace TiDB\Grammar;
+namespace TiDB\Grammars;
 
 use Illuminate\Database\Connection;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\Grammars\MySqlGrammar;
 use Illuminate\Support\Fluent;
 
-class TiDBSchemaGrammar extends MySqlGrammar
+class SchemaGrammar extends MySqlGrammar
 {
     /**
      * TiDB does not support multiple schema changes in one statement.

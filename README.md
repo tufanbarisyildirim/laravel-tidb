@@ -1,7 +1,7 @@
 # Laravel TiDB
 
-TiDB is a distributed SQL database that supports MySQL Protocol. It already works with most of mysql-compatible libs/tools. 
-However it has does not support some MySQL features like foreign keys, xml and json queries etc. 
+TiDB is a distributed database that supports MySQL Protocol. It already works with most of mysql-compatible libs/tools. 
+However it does not support some MySQL features like foreign keys, xml and json queries etc. 
 
 The goal is to change queries on the fly to make them compatible with TiDB before hitting to database.
 
@@ -11,21 +11,21 @@ The goal is to change queries on the fly to make them compatible with TiDB befor
 
 
 ## Current Progress
-This lib aims to provide some workarounds to keep your laravel app working with tidb. But a single developer can't guarantee to get all done. 
+This library aims to provide some workarounds to keep your laravel app working with TiDB. But a single developer can't guarantee to get the all done. 
 I will solve every situation I face in my own projects.
 
 ### DDL Incompatibility.
 In TiDB, all supported DDL changes are performed online. Compared with DDL operations in MySQL, the DDL operations in TiDB have the following major restrictions:
 
 - [x] Multiple operations cannot be completed in a single ALTER TABLE statement. For example, it is not possible to add multiple columns or indexes in a single statement. Otherwise, the Unsupported multi schema change error might be output.
-- [ ] Different types of indexes `(HASH|BTREE|RTREE|FULLTEXT)` are not supported, and will be parsed and ignored when specified.
-- [ ] Adding/Dropping the primary key is unsupported unless alter-primary-key is enabled.
+- [wontfix] Different types of indexes `(HASH|BTREE|RTREE|FULLTEXT)` are not supported, and will be parsed and ignored when specified.
+- [wontfix] Adding/Dropping the primary key is unsupported unless alter-primary-key is enabled.
 - [ ] Changing the field type to its superset is unsupported. For example, TiDB does not support changing the field type from `INTEGER` to `VARCHAR`, or from `TIMESTAMP` to DATETIME. Otherwise, the error information Unsupported modify column: type `%d` not match origin `%d `might be output.
 - [ ] Change/Modify data type does not currently support "lossy changes", such as changing from `BIGINT` to `INT`.
 - [ ] Change/Modify decimal columns does not support changing the precision.
 - [ ] Change/Modify integer columns does not permit changing the UNSIGNED attribute.
 - [ ] The `ALGORITHM={INSTANT,INPLACE,COPY}` syntax functions only as an assertion in TiDB, and does not modify the ALTER algorithm. See ALTER TABLE for further details.
-- [ ] Table Partitioning supports Hash, Range, and Add/Drop/Truncate/Coalesce. The other partition operations are ignored. The Warning: Unsupported partition type, treat as normal table error might be output. The following Table Partition syntaxes are not supported:
+- [wontfix] Table Partitioning supports Hash, Range, and Add/Drop/Truncate/Coalesce. The other partition operations are ignored. The Warning: Unsupported partition type, treat as normal table error might be output. The following Table Partition syntaxes are not supported:
 - [ ] PARTITION BY LIST
 - [ ] PARTITION BY KEY
 - [ ] SUBPARTITION
